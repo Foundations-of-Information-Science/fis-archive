@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+<meta name="generator" content="hypermail 2.1.8, see http://www.hypermail.org/" />
+<title>fis: [Fis] A decision-theoretic view of entropy and information</title>
+<meta name="Author" content="jakulin@acm.org (jakulin@acm.org)" />
+<meta name="Subject" content="[Fis] A decision-theoretic view of entropy and information" />
+<meta name="Date" content="2004-04-14" />
+<style type="text/css">
+/*<![CDATA[*/
+/* To be incorporated in the main stylesheet, don't code it in hypermail! */
+body {color: black; background: #ffffff}
+dfn {font-weight: bold;}
+pre { background-color:inherit;}
+.head { border-bottom:1px solid black;}
+.foot { border-top:1px solid black;}
+th {font-style:italic;}
+table { margin-left:2em;}map ul {list-style:none;}
+#mid { font-size:0.9em;}
+#received { float:right;}
+address { font-style:inherit ;}
+/*]]>*/
+.quotelev1 {color : #990099}
+.quotelev2 {color : #ff7700}
+.quotelev3 {color : #007799}
+.quotelev4 {color : #95c500}
+</style>
+</head>
+<body>
+<div class="head">
+<h1>[Fis] A decision-theoretic view of entropy and information</h1>
+<!-- received="Wed Apr 14 09:38:23 2004" -->
+<!-- isoreceived="20040414073823" -->
+<!-- sent="Wed, 14 Apr 2004 09:36:01 +0200" -->
+<!-- isosent="20040414073601" -->
+<!-- name="jakulin@acm.org" -->
+<!-- email="jakulin@acm.org" -->
+<!-- subject="[Fis] A decision-theoretic view of entropy and information" -->
+<!-- id="20040414073617.7E07E7DA6@mail.fri.uni-lj.si" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="003101c421bd$9f65c900$1302a8c0&#64;loet" -->
+<!-- expires="-1" -->
+<map id="navbar" name="navbar">
+<ul class="links">
+<li>
+<dfn>This message</dfn>:
+[ <a href="#start" name="options1" id="options1" tabindex="1">Message body</a> ]
+ [ <a href="#options2">More options</a> ]
+</li>
+<li>
+<dfn>Related messages</dfn>:
+<!-- unext="start" -->
+[ <a href="1427.html" title="Michel Petitjean: &quot;[Fis] phenomenological entropy&quot;">Next message</a> ]
+[ <a href="1425.html" title="Loet Leydesdorff: &quot;RE: [Fis] entropy as average expected loss&quot;">Previous message</a> ]
+[ <a href="1425.html" title="Loet Leydesdorff: &quot;RE: [Fis] entropy as average expected loss&quot;">In reply to</a> ]
+<!-- unextthread="start" -->
+<!-- ureply="end" -->
+</li>
+</ul>
+</map>
+</div>
+<!-- body="start" -->
+<div class="mail">
+<address class="headers">
+<span id="from">
+<dfn>From</dfn>: &lt;<a href="mailto:jakulin&#64;acm.org?Subject=Re:%20[Fis]%20A%20decision-theoretic%20view%20of%20entropy%20and%20information">jakulin@acm.org</a>&gt;
+</span><br />
+<span id="date"><dfn>Date</dfn>: Wed 14 Apr 2004 - 09:36:01 CEST</span><br />
+</address>
+<p>
+Loet wrote:
+<br />
+<em class="quotelev1">&gt; Thus, Shannon's choice to equate H with the notion 
+</em><br />
+<em class="quotelev1">&gt; of entropy was very fortunate. It made the rich domain 
+</em><br />
+<em class="quotelev1">&gt; of equations and algorithms that had been studied in 
+</em><br />
+<em class="quotelev1">&gt; the century before available to the study of the 
+</em><br />
+<em class="quotelev1">&gt; dividedness/order/organization of systems other than 
+</em><br />
+<em class="quotelev1">&gt; physics. All these forms of organization (and self-
+</em><br />
+<em class="quotelev1">&gt; organization) can be studied in terms of their 
+</em><br />
+<em class="quotelev1">&gt; probabilistic entropy. 
+</em><br />
+<p>A great contribution of Boltzmann's, Gibbs' and Shannon's work is that it
+<br />
+forced everyone to think probabilistically. But it is the step towards
+<br />
+probability what is important and not as much the entropy itself. Again, it
+<br />
+is very important to distinguish statistical H from the thermodynamical S.
+<br />
+Some authors use S for Shannon's entropy: very unfortunately, as this is a
+<br />
+major contribution to confusion.
+<br />
+<p>=============
+<br />
+<p>I've had some thoughts recently about a particular direction of
+<br />
+integrating/generalizing information theory with decision and game theory,
+<br />
+which has been hinted at in the subject. In this scheme, the relationship
+<br />
+between information and entropy is clear and consistent: but the two notions
+<br />
+are so similar that one wonders whether having two words for one thing is
+<br />
+justified.
+<br />
+<p><p>* 1. Decision Theory: Tackling the Truth/Goodness Dilemma
+<br />
+<pre>
+----
+Decision theory studies how to make the best decision. It is a theory,
+hence, that does not deal with truth or falsehood, but with good or bad.
+This is/ought dilemma is reflected in decision theory with two types of
+quantity: probability (which refers to truth) and utility (which refers to
+goodness). Most of decision theory is based around a simple
+maximum-expected-utility principle which picks the decision that yields
+maximum expected utility. The opposite of utility is loss.
+There are many synomyms to utility and loss:
+loss : cost, error, deviation, distortion, bad
+gain : benefit, utility, gain, fidelity, good, profit, fitness
+* 2. Loss Functions
+----
+Assume data D (which is a set of instances described with a set of
+attributes), and a model M. How well does model M fit the data D? One simple
+way of approaching this is to define a loss function, which computes the
+loss induced by M approximating D. Loss functions should have a few obvious
+properties, like a clearly defined minimum at a sane place, the maximum is
+not usually interesting, they should be gently sloping and as noiseless as
+possible to facilitate optimization. 
+In statistics, we usually want a likely model. This is obtained via seeking
+a model given which the data becomes likely (Bayesians will disagree here,
+correctly, but I'll skip this discussion as it is not central). In a sense,
+a good model makes the data obvious. A good model thereby &quot;explains&quot; the
+data, makes it &quot;nothing special&quot;. In other words, the pursuit of likely
+models connects truth with utility: that what is likelier is better, in the
+same scientific spirit of the true is the good. In that sense,
+probability-based utility remains in the domain of pure inquiry.
+Therefore, we are maximizing P(D|M), and the loss can be defined as L =
+-P(D|M). There are many instances in the data: D = [d1,d2,...,dN]. A
+frequently made assumption is that the instances were sampled randomly and
+independently one of another. If so, we can deal with d's as independent
+events: we are minimizing L = -P(d1|M)P(d2|M)...P(dN|M) This multiplication
+task can be simplified by using a logarithm, and dividing it by the number
+of instances, N.
+L = -(1/N) * [Log P(d1|M) + Log P(d2|M) + ... Log P(dN|M)]
+This kind of loss is referred to as expected negative log-likelihood,
+something to minimize. It is expected, because we average it by dividing by
+N: this is the average log-loss per instance. Since probabilities are on
+[0..1], the logarithms are negative, it makes sense to switch around and
+work with negative gain: expected log-likelihood, something to maximize.
+Does it begin to look familiar? Let us now assume that our probabilistic
+model P captures the data so well that we no longer need it. Let us pretend
+that we are using the model itself to generate data. The result is as
+follows:
+H(M) = -Integrate [ P(x|M) Log P(x|M) ] dx 
+We have derived Shannon's entropy through the following assumptions:
+- logarithmic gain/loss utility function
+- independence of instances
+- the use of averaging
+- the assumption that Model = Reality
+Shannon's entropy is the inherent expected loss of the *model*, regardless
+of the data. Expected negative log-likelihood is the *average* loss on a
+particular set of data. I would like to refer to expected loss as
+approximate entropy, or perhaps empirical entropy, sample entropy. Any
+recommendations?
+* 3. Information and Entropy
+----
+Now assume that we have two models M1 and M2, resulting in P(x|M1) and in
+P(x|M2). What is the relationship between them? We have two choices, to keep
+them apart by assuming independence P(x|M1)P(x|M2) or to unite them together
+P(x|M1,M2). Mutual information between M1 and M2 corresponds to the
+reduction in entropy achieved by uniting the two models. Because of the
+properties of log-gain, it is irrelevant what we had earlier M1 or M2. The
+same change in log-gain is achieved by:
+- uniting M1 and M2
+- adding M1 to M2
+- adding M2 to M1
+These properties are not retained, however, by using a different loss
+function.
+Therefore, mutual information is the gain achieved through holism.
+* 4. Constraints and Information
+----
+The higher the entropy of a model, the fewer its constraints. It is the
+constraints in the model that reduce its entropy. It is the constraints in
+real world that enable us to put constraints in our models. But we cannot
+equate constraints and information. Constraints are aspects of models (is).
+Information is an expression of quality (ought).
+Bibliography:
+[1] Topsoe: Information theory at the service of science.
+<a href="../../www.math.ku.dk/~topsoe/aspects.pdf">http://www.math.ku.dk/~topsoe/aspects.pdf</a>
+[2] Grunwald &amp; Dawid: Game theory, maximum entropy, minimum discrepancy, and
+robust bayesian decision theory. Annals of Mathematical Statistics,
+forthcoming. <a href="../../www.cwi.nl/~pdg/ftp/grunwalddawid.pdf">http://www.cwi.nl/~pdg/ftp/grunwalddawid.pdf</a>
+_______________________________________________
+fis mailing list
+fis&#64;listas.unizar.es
+<a href="../../webmail.unizar.es/mailman/listinfo/fis">http://webmail.unizar.es/mailman/listinfo/fis</a>
+</pre>
+<span id="received"><dfn>Received on</dfn> Wed Apr 14 09:38:23 2004</span>
+</div>
+<!-- body="end" -->
+<div class="foot">
+<map id="navbarfoot" name="navbarfoot" title="Related messages">
+<ul class="links">
+<li><dfn>This message</dfn>: [ <a href="#start">Message body</a> ]</li>
+<!-- lnext="start" -->
+<li><dfn>Next message</dfn>: <a href="1427.html" title="Next message in the list">Michel Petitjean: "[Fis] phenomenological entropy"</a></li>
+<li><dfn>Previous message</dfn>: <a href="1425.html" title="Previous message in the list">Loet Leydesdorff: "RE: [Fis] entropy as average expected loss"</a></li>
+<li><dfn>In reply to</dfn>: <a href="1425.html" title="Message to which this message replies">Loet Leydesdorff: "RE: [Fis] entropy as average expected loss"</a></li>
+<!-- lnextthread="start" -->
+<!-- lreply="end" -->
+</ul>
+<ul class="links">
+<li><a name="options2" id="options2"></a><dfn>Contemporary messages sorted</dfn>: [ <a href="date.html#1426" title="Contemporary messages by date">By Date</a> ] [ <a href="index.html#1426" title="Contemporary discussion threads">By Thread</a> ] [ <a href="subject.html#1426" title="Contemporary messages by subject">By Subject</a> ] [ <a href="author.html#1426" title="Contemporary messages by author">By Author</a> ] [ <a href="attachment.html" title="Contemporary messages by attachment">By messages with attachments</a> ]</li>
+</ul>
+</map>
+</div>
+<!-- trailer="footer" -->
+<p><small><em>
+This archive was generated by <a href="../../www.hypermail.org/default.htm">hypermail 2.1.8</a> 
+: Mon 07 Mar 2005 - 10:24:46 CET
+</em></small></p>
+</body>
+</html>
