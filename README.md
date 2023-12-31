@@ -1,7 +1,7 @@
 # FIS Mailing List Archive 1997-2007
 
-This is the GitHub repository with the source files for the FIS mailing list archives: fhe folder `mailings`
-contains the archives for 1997-2007.
+This is the [GitHub repository](https://github.com/Foundations-of-Information-Science/fis-archive) with the
+source files for the FIS mailing list archives: the folder `mailings` contains the archives for 1997-2007. 
 
 Please see the [FIS website](https://fis.sciforum.net/) for more information about the FIS community and
 contact persons.
